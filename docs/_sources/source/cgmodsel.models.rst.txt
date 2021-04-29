@@ -1,0 +1,45 @@
+cgmodsel.models package
+=======================
+
+Submodules
+----------
+
+cgmodsel.models.base module
+---------------------------
+
+.. automodule:: cgmodsel.models.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.models.model\_clz module
+---------------------------------
+
+.. automodule:: cgmodsel.models.model_clz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.models.model\_pw module
+--------------------------------
+
+.. automodule:: cgmodsel.models.model_pw
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.models.model\_pwsl module
+----------------------------------
+
+.. automodule:: cgmodsel.models.model_pwsl
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cgmodsel.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

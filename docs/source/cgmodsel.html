@@ -1,0 +1,1640 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cgmodsel package &mdash; cgmodsel 1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cgmodsel.models package" href="cgmodsel.models.html" />
+    <link rel="prev" title="cgmodsel" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cgmodsel
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">cgmodsel</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cgmodsel package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cgmodsel.models.html">cgmodsel.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.admm">cgmodsel.admm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.base_admm">cgmodsel.base_admm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.base_huber">cgmodsel.base_huber module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.base_solver">cgmodsel.base_solver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.dataops">cgmodsel.dataops module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.huber_clz">cgmodsel.huber_clz module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.map">cgmodsel.map module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.prox">cgmodsel.prox module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel.utils">cgmodsel.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cgmodsel">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cgmodsel</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">cgmodsel</a> &raquo;</li>
+        
+      <li>cgmodsel package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/cgmodsel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cgmodsel-package">
+<h1>cgmodsel package<a class="headerlink" href="#cgmodsel-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cgmodsel.models.html">cgmodsel.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cgmodsel.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgmodsel.models.html#module-cgmodsel.models.base">cgmodsel.models.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgmodsel.models.html#module-cgmodsel.models.model_clz">cgmodsel.models.model_clz module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgmodsel.models.html#module-cgmodsel.models.model_pw">cgmodsel.models.model_pw module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgmodsel.models.html#module-cgmodsel.models.model_pwsl">cgmodsel.models.model_pwsl module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cgmodsel.models.html#module-cgmodsel.models">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-cgmodsel.admm">
+<span id="cgmodsel-admm-module"></span><h2>cgmodsel.admm module<a class="headerlink" href="#module-cgmodsel.admm" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum</p>
+<p>This module implements proximal gradient ADMM algorithms similar to the
+one described in
+“Alternating Direction Methods for Latent Variable Gaussian Graphical
+Model Selection”, 2013, by Ma, Xue and Zou.</p>
+<dl class="py class">
+<dt id="cgmodsel.admm.AdmmCGaussianPW">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.admm.</span></code><code class="sig-name descname"><span class="pre">AdmmCGaussianPW</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmCGaussianPW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseSolverPW" title="cgmodsel.base_solver.BaseSolverPW"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseSolverPW</span></code></a>, <a class="reference internal" href="#cgmodsel.base_admm.BaseAdmm" title="cgmodsel.base_admm.BaseAdmm"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_admm.BaseAdmm</span></code></a></p>
+<p>solve the problem</p>
+<blockquote>
+<div><p>min l(S) + lambda ||S||_{1,2} s.t. Lambda[S]&gt;0</p>
+</div></blockquote>
+<p>via ADMM, where l is the pseudo likelihood with pairwise parameters S.
+Here, S extracts the quantitative-quantitative interactions
+from the pairwise parameter matrix S=(Q &amp; R^T \ \ R &amp; -Lbda),
+that is, Lambda[S]=Lbda.</p>
+<p>The estimated probability model has (unnormalized) density</p>
+<blockquote>
+<div><p>p(x, y) ~ exp(1/2 (x, y)^T Theta (x, y) + alpha^T y + u^T x)</p>
+</div></blockquote>
+<p>where x are indicator-coded discrete variables
+(reduced by the indicator for the 0-th level for identifiability reasons),
+and y are the quantitative variables.
+Note that alpha and u are optional univariate parameters that can be included
+in the optimization problem above.</p>
+<p>“must provide with dictionary meta</p>
+<dl class="py method">
+<dt id="cgmodsel.admm.AdmmCGaussianPW.get_objective">
+<code class="sig-name descname"><span class="pre">get_objective</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_reg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmCGaussianPW.get_objective" title="Permalink to this definition">¶</a></dt>
+<dd><p>compute real objective (not the ADMM objective)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_s</strong> (<em>np.array</em>) – sparse parameter matrix.</p></li>
+<li><p><strong>vec_u</strong> (<em>np.array</em><em>, </em><em>optional</em>) – univariate discrete parameters.</p></li>
+<li><p><strong>alpha</strong> (<em>np.array</em><em>, </em><em>optional</em>) – univariate continuous parameters.</p></li>
+<li><p><strong>use_reg</strong> (<em>bool</em><em>, </em><em>optional</em>) – include value of regularization.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>objective value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.admm.AdmmCGaussianPW.set_graph">
+<code class="sig-name descname"><span class="pre">set_graph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmCGaussianPW.set_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>set graph constraint (experimental feature)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graph</strong> (<em>np.array</em>) – graph as incidence matrix</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.admm.AdmmCGaussianSL">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.admm.</span></code><code class="sig-name descname"><span class="pre">AdmmCGaussianSL</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmCGaussianSL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseSolverSL" title="cgmodsel.base_solver.BaseSolverSL"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseSolverSL</span></code></a>, <a class="reference internal" href="#cgmodsel.base_admm.BaseAdmm" title="cgmodsel.base_admm.BaseAdmm"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_admm.BaseAdmm</span></code></a></p>
+<p>solve the problem</p>
+<blockquote>
+<div><p>min_{S,L} l(S+L) + lambda ||S||_{1,2} + rho * tr(L)
+s.t. Lambda[S+L]&gt;0, L&gt;=0,</p>
+</div></blockquote>
+<p>where l is the pseudo likelihood with pairwise parameters Theta=S+L,
+here Lambda[S+L] extracts the quantitative-quantitative interactions
+from the pairwise parameter matrix Theta=(Q &amp; R^T \ \ R &amp; -Lbda),
+that is, Lambda[Theta] = Lbda.</p>
+<p>The estimated probability model has (unnormalized) density</p>
+<blockquote>
+<div><p>p(x,y) ~ exp(1/2 (x, y)^T Theta (x, y) + alpha^T y + u^T x)</p>
+</div></blockquote>
+<p>where x are indicator-coded discrete variables
+(reduced by the indicator for the 0-th level for identifiability reasons),
+and y are the quantitative variables.
+Note that alpha and u are optional univariate parameters
+that can be included in the optimization problem above.</p>
+<p>The solver is an ADMM algorithm with a proximal gradient step.</p>
+<p>must provide with dictionary meta</p>
+<dl class="py method">
+<dt id="cgmodsel.admm.AdmmCGaussianSL.get_objective">
+<code class="sig-name descname"><span class="pre">get_objective</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec_u</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmCGaussianSL.get_objective" title="Permalink to this definition">¶</a></dt>
+<dd><p>compute real objective (not the ADMM objective)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_s</strong> (<em>np.array</em>) – sparse component.</p></li>
+<li><p><strong>mat_l</strong> (<em>np.array</em>) – low-rank component.</p></li>
+<li><p><strong>vec_u</strong> (<em>np.array</em><em>, </em><em>optional</em>) – univariate discrete parameters.</p></li>
+<li><p><strong>alpha</strong> (<em>np.array</em><em>, </em><em>optional</em>) – univariate continuous parameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>objective value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.admm.AdmmGaussianPW">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.admm.</span></code><code class="sig-name descname"><span class="pre">AdmmGaussianPW</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmGaussianPW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseSolverPW" title="cgmodsel.base_solver.BaseSolverPW"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseSolverPW</span></code></a>, <a class="reference internal" href="#cgmodsel.base_admm.BaseAdmm" title="cgmodsel.base_admm.BaseAdmm"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_admm.BaseAdmm</span></code></a></p>
+<p>solve the problem</p>
+<blockquote>
+<div><p>min l(S) + lambda * ||S||_1  s.t.  S positive definite</p>
+</div></blockquote>
+<p>where l is the negative log likelihood with pairwise parameters S.</p>
+<p>The solver is an ADMM algorithm with an analytical solution of the
+proximal mapping of the likelihood, compare Ma et al. 2012.</p>
+<p>“must provide with dictionary meta</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.admm.AdmmGaussianSL">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.admm.</span></code><code class="sig-name descname"><span class="pre">AdmmGaussianSL</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.admm.AdmmGaussianSL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseSolverSL" title="cgmodsel.base_solver.BaseSolverSL"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseSolverSL</span></code></a>, <a class="reference internal" href="#cgmodsel.base_admm.BaseAdmm" title="cgmodsel.base_admm.BaseAdmm"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_admm.BaseAdmm</span></code></a></p>
+<p>solve the problem</p>
+<blockquote>
+<div><p>min_{S, L} l(S-L) + lambda ||S||_1 + gamma tr(L) s.t. S-L&gt;0, L&gt;=0</p>
+</div></blockquote>
+<p>where l is the Gaussian likelihood with pairwise parameters Theta=S-L,
+here Theta is the precision matrix
+of the (unnormalized) zero-mean Gaussian model</p>
+<blockquote>
+<div><p>p(y) ~ exp(-1/2 y^T Theta y).</p>
+</div></blockquote>
+<p>Solver is an ADMM algorithm with proximal gradient step.</p>
+<p>“must provide with dictionary meta</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.base_admm">
+<span id="cgmodsel-base-admm-module"></span><h2>cgmodsel.base_admm module<a class="headerlink" href="#module-cgmodsel.base_admm" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>), 2019</p>
+<dl class="py class">
+<dt id="cgmodsel.base_admm.BaseAdmm">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_admm.</span></code><code class="sig-name descname"><span class="pre">BaseAdmm</span></code><a class="headerlink" href="#cgmodsel.base_admm.BaseAdmm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>A base class for ADMM solvers.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.base_admm.BaseAdmm.admm_param">
+<code class="sig-name descname"><span class="pre">admm_param</span></code><a class="headerlink" href="#cgmodsel.base_admm.BaseAdmm.admm_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>initial admm parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_admm.BaseAdmm.opts">
+<code class="sig-name descname"><span class="pre">opts</span></code><a class="headerlink" href="#cgmodsel.base_admm.BaseAdmm.opts" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary of solver options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_admm.BaseAdmm.set_defaults_admm">
+<code class="sig-name descname"><span class="pre">set_defaults_admm</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_admm.BaseAdmm.set_defaults_admm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set default solver options in class attribute opt.</p>
+<p>Adjustable solver options contain abstol, reltol,
+maxiter, stoptol, verb, etc.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_admm.BaseAdmm.solve">
+<code class="sig-name descname"><span class="pre">solve</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">report</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warminit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_admm.BaseAdmm.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>solve the problem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>report</strong> (<em>bool</em>) – whether to print additional summary.</p></li>
+<li><p><strong>warminit</strong> (<em>solver state</em>) – starting point for the solver.</p></li>
+<li><p><strong>kwargs</strong> (<em>optional</em>) – additional solver options to replace defaults.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary with info about solution/solving process</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.base_huber">
+<span id="cgmodsel-base-huber-module"></span><h2>cgmodsel.base_huber module<a class="headerlink" href="#module-cgmodsel.base_huber" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum</p>
+<p>base class for CG model selection using Huber approximation of sparse norm</p>
+<p>Experimental code</p>
+<dl class="py class">
+<dt id="cgmodsel.base_huber.HuberBase">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_huber.</span></code><code class="sig-name descname"><span class="pre">HuberBase</span></code><a class="headerlink" href="#cgmodsel.base_huber.HuberBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseGradSolver" title="cgmodsel.base_solver.BaseGradSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseGradSolver</span></code></a>, <a class="reference internal" href="#cgmodsel.base_solver.BaseCGSolver" title="cgmodsel.base_solver.BaseCGSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseCGSolver</span></code></a></p>
+<p>base class Huber solvers</p>
+<p>must call method drop_data after initialization</p>
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.callback">
+<code class="sig-name descname"><span class="pre">callback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">approxgrad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reshapedprinting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>a callback function that serves primarily for debugging</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.get_bounds">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_bounds</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.get_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>get bounds for solver</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.get_starting_point">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_starting_point</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.get_starting_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>get starting point</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.nocallback">
+<code class="sig-name descname"><span class="pre">nocallback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.nocallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>callback that does basically nothing</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.preprocess">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">preprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>preprocess input x</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.print_params">
+<code class="sig-name descname"><span class="pre">print_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.print_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>print params</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.slimcallback">
+<code class="sig-name descname"><span class="pre">slimcallback</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.slimcallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>callback</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.solve">
+<code class="sig-name descname"><span class="pre">solve</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explicitbounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracktime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>solve an unregularized problem</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_huber.HuberBase.solve_sparse">
+<code class="sig-name descname"><span class="pre">solve_sparse</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">innercallback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter_inner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter_outer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-09</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftol_inner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disp_converg_msgs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracktime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">earlystopping_inner</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_huber.HuberBase.solve_sparse" title="Permalink to this definition">¶</a></dt>
+<dd><p>solve l_{1,2}-norm regularized problem, i.e. min l(x) + norm(x, ‘2/1’).
+The solver uses Huber smoothening of the l2/1 regularization term
+this solves a sequence of smoothened problems that are parametrized by delta,
+i.e. smoothening takes place on the interval (-delta, delta)</p>
+<p>delta… initial smoothening parameter (is stepwise decreased)
+klbda… scaling factor of regularization parameter
+innercallback… optional callback function for inner iterations,
+e.g. methods callback, slimcallback provided by this class
+verb… if output is printed
+seed… seed (if random starting point is used)
+x0.. optional warm start to solution
+maxiter_inner… maximum number of iterations when solving one subproblem</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.base_solver">
+<span id="cgmodsel-base-solver-module"></span><h2>cgmodsel.base_solver module<a class="headerlink" href="#module-cgmodsel.base_solver" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum</p>
+<p>base class for CG models and solvers</p>
+<dl class="py class">
+<dt id="cgmodsel.base_solver.BaseCGSolver">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_solver.</span></code><code class="sig-name descname"><span class="pre">BaseCGSolver</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>A base class for all CG model solvers.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseCGSolver.cat_data">
+<code class="sig-name descname"><span class="pre">cat_data</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.cat_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>discrete data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseCGSolver.cont_data">
+<code class="sig-name descname"><span class="pre">cont_data</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.cont_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>continuous data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseCGSolver.cat_format_required">
+<code class="sig-name descname"><span class="pre">cat_format_required</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.cat_format_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>format of the discrete data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseCGSolver.meta">
+<code class="sig-name descname"><span class="pre">meta</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary with meta info about the data - attributes: n_data (number of data points), n_cg (number of continuous variables), n_cat (number of discrete variables), sizes (list of #levels per discrete variable), glims (group delimiter for discrete variables).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseCGSolver.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>solver name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseCGSolver.opts">
+<code class="sig-name descname"><span class="pre">opts</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.opts" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary of solver options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>must call method drop_data after initialization</p>
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseCGSolver.drop_data">
+<code class="sig-name descname"><span class="pre">drop_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.drop_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drop data and augment info in meta about the data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – tuple of discrete and continuous data,</p></li>
+<li><p><strong>np.array for purely continuous/discrete model</strong> (<em>or</em>) – </p></li>
+<li><p><strong>is inferred from attributes 'n_cg' and 'n_cat' in meta</strong><strong>)</strong><strong></strong> (<em>(</em><em>which</em>) – </p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionairy with meta information about the data.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Discrete data must be provided in dummy-encoded form
+(leaving out 0-th levels if required by the solver).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseCGSolver.get_name">
+<code class="sig-name descname"><span class="pre">get_name</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseCGSolver.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return name of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>name of the model</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.base_solver.BaseGradSolver">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_solver.</span></code><code class="sig-name descname"><span class="pre">BaseGradSolver</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseGradSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>Base solver for iterative (scipy L-BFGS-B) solvers.</p>
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseGradSolver.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">optvars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseGradSolver.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>a function to display the problem parameters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseGradSolver.pack">
+<code class="sig-name descname"><span class="pre">pack</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseGradSolver.pack" title="Permalink to this definition">¶</a></dt>
+<dd><p>pack (typically) gradients into vector x</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseGradSolver.unpack">
+<code class="sig-name descname"><span class="pre">unpack</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseGradSolver.unpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>unpack model parameters from vector x, save: returns copy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.base_solver.BaseSolverPW">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_solver.</span></code><code class="sig-name descname"><span class="pre">BaseSolverPW</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverPW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseSparseSolver" title="cgmodsel.base_solver.BaseSparseSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseSparseSolver</span></code></a></p>
+<p>A base class for sparse graphical model solvers.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSolverPW.problem_vars">
+<code class="sig-name descname"><span class="pre">problem_vars</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverPW.problem_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>currently stored parameters.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSolverPW.lbda">
+<code class="sig-name descname"><span class="pre">lbda</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverPW.lbda" title="Permalink to this definition">¶</a></dt>
+<dd><p>regularization parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>must call method drop_data after initialization</p>
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSolverPW.get_canonicalparams">
+<code class="sig-name descname"><span class="pre">get_canonicalparams</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverPW.get_canonicalparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PW CG model parameters from flat parameter vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Model_PW instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSolverPW.get_regularization_params">
+<code class="sig-name descname"><span class="pre">get_regularization_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverPW.get_regularization_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>get regularization parameters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSolverPW.set_regularization_params">
+<code class="sig-name descname"><span class="pre">set_regularization_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regparam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_direct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'std'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverPW.set_regularization_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>set regularization parameters for the graphical lasso.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hyperparams</strong> – pair of regularization parameters</p></li>
+<li><p><strong>ptype</strong> – if ‘std’,
+set lambda = regparam * scaling(n, nvars), where
+Here, scaling(n, nvars) is a scaling suggested by
+consistency results
+Argument &lt;scales&gt; is not used in this case!
+if ‘direct’, directly set lambda = regparam,
+if ‘convex’ assume that alpha = regparam and
+min_S (1-alpha) * l(S) + alpha * ||S||_ {1,2}.</p></li>
+<li><p><strong>scale</strong> – if None, use standard scaling np.sqrt(log(n_cg)/n)
+else  scales must be a nonnegative number with which lambda
+is scaled</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.base_solver.BaseSolverSL">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_solver.</span></code><code class="sig-name descname"><span class="pre">BaseSolverSL</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverSL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseSparseSolver" title="cgmodsel.base_solver.BaseSparseSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseSparseSolver</span></code></a></p>
+<p>A base class for sparse + low-rank model solvers.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSolverSL.problem_vars">
+<code class="sig-name descname"><span class="pre">problem_vars</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverSL.problem_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>currently stored parameters.</p>
+</dd></dl>
+
+<p>must call method drop_data after initialization</p>
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSolverSL.get_canonicalparams">
+<code class="sig-name descname"><span class="pre">get_canonicalparams</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverSL.get_canonicalparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the PW S+L CG model parameters from flat parameter vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Model_PWSL instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSolverSL.get_regularization_params">
+<code class="sig-name descname"><span class="pre">get_regularization_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverSL.get_regularization_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>get regularization parameters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSolverSL.set_regularization_params">
+<code class="sig-name descname"><span class="pre">set_regularization_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scales</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_direct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ptype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'std'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSolverSL.set_regularization_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>set regularization parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hyperparams</strong> – pair of regularization parameters.</p></li>
+<li><p><strong>scales</strong> – if None, use standard scaling sqrt(log(n_cg)/n),
+else scales must be a two-tuple, and lambda and rho are
+scaled according to the elements of this two-tuple</p></li>
+<li><p><strong>ptype</strong> (<em>str</em>) – if ‘std’, then
+set lambda, rho = hyperparams * scaling(n, nvars), where
+the parameters are for the problem
+min l(S-L) + lambda * ||S||_1 + rho * tr(L) s.t. S-L&gt;0, L&gt;=0.
+Here, scaling(n, nvars) is a scaling suggested by
+consistency results (argument scales is ignored in this case).
+if ‘direct’, directly set lambda, rho = hyperparams,
+if ‘convex’ assume that alpha, beta = hyperparams and
+alpha, beta are weights in [0,1] and the problem is
+min (1-alpha-beta) * l(S-L) + alpha * ||S||_1 + beta * tr(L)
+s.t. S-L&gt;0, L&gt;=0</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.base_solver.BaseSparseSolver">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.base_solver.</span></code><code class="sig-name descname"><span class="pre">BaseSparseSolver</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useweights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseCGSolver" title="cgmodsel.base_solver.BaseCGSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseCGSolver</span></code></a></p>
+<p>Base class that contains proximal operators.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSparseSolver.opts">
+<code class="sig-name descname"><span class="pre">opts</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver.opts" title="Permalink to this definition">¶</a></dt>
+<dd><p>solver options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSparseSolver.useweights">
+<code class="sig-name descname"><span class="pre">useweights</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver.useweights" title="Permalink to this definition">¶</a></dt>
+<dd><p>whether to use weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSparseSolver.weights">
+<code class="sig-name descname"><span class="pre">weights</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver.weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>weights for weighted l_12-norm regularization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.base_solver.BaseSparseSolver.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>class name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>must call method drop_data after initialization</p>
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSparseSolver.shrink">
+<code class="sig-name descname"><span class="pre">shrink</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver.shrink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate (group)- soft shrink of matrix mat_s with tau.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_s</strong> (<em>np.array</em>) – parameter matrix.</p></li>
+<li><p><strong>tau</strong> (<em>float</em>) – non-negative thresholding parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>shrunken matrix.
+float: shrunken l_12 norm.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.base_solver.BaseSparseSolver.sparse_norm">
+<code class="sig-name descname"><span class="pre">sparse_norm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.BaseSparseSolver.sparse_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>return l12/ l1-norm of mat_s</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mat_s</strong> (<em>np.array</em>) – parameter matrix.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>l12-norm.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.base_solver.set_sparsity_weights">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.base_solver.</span></code><code class="sig-name descname"><span class="pre">set_sparsity_weights</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cont_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.base_solver.set_sparsity_weights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate weights for all groups as suggested by LST2015
+(may be essential for “good”, “consistent” results)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta data</p></li>
+<li><p><strong>cat_data</strong> – categorical data</p></li>
+<li><p><strong>cont_data</strong> – continuous data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>weights</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.dataops">
+<span id="cgmodsel-dataops-module"></span><h2>cgmodsel.dataops module<a class="headerlink" href="#module-cgmodsel.dataops" title="Permalink to this headline">¶</a></h2>
+<p>Copyright: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>)
+(2019)</p>
+<p>IO operations for loading data</p>
+<dl class="py function">
+<dt id="cgmodsel.dataops.dummy_from_cat_data">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">dummy_from_cat_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">red</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.dummy_from_cat_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert discrete data cat_data into dummy-coded version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta data for data cat_data,
+must contain attribute cat_glims
+(cumulative levels/delimiters for concatenated indicator variables)</p></li>
+<li><p><strong>red</strong> (<em>bool</em>) – if True, leave out indicator variable for first level</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>categorical data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.get_meta_data">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">get_meta_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">catuniques</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">categoricals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coded_colnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detectindexcols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.get_meta_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts and returns dictionary of meta data for provided data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.dataframe</em>) – data</p></li>
+<li><p><strong>catuniques</strong> – either dictionary with levels of discrete variable
+(this might be useful if certain discrete labels are
+unobserved)
+or list of levels, if the same for all discrete variables.</p></li>
+<li><p><strong>categoricals</strong> – optional list of column names for discrete variables.</p></li>
+<li><p><strong>coded_colnames</strong> (<em>bool</em>) – if True, recognize categorical variables by
+prefix ‘X’ in column name.</p></li>
+<li><p><strong>detectindexcols</strong> (<em>bool</em>) – if True, look for columns with elements
+in {0,…, k} and interpret such a columns as a discrete variable.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary with meta information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.load_data_from_csv">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">load_data_from_csv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.load_data_from_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>read data from csv file into a panda dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – filename.</p></li>
+<li><p><strong>drop</strong> (<em>tuple</em>) – column names to exclude from loading.</p></li>
+<li><p><strong>names</strong> (<em>iterable</em><em>, </em><em>optional</em>) – names for the loaded columns.</p></li>
+<li><p><strong>verb</strong> (<em>bool</em>) – whether to print stats.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.load_prepare_data">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">load_prepare_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standardize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cattype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dummy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shuffleseed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.load_prepare_data" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datasource</strong> – either filename of csv-file (load data!) or panda data frame.</p></li>
+<li><p><strong>drop</strong> – (optional) if loading data, specifies columns not to load.</p></li>
+<li><p><strong>standardize</strong> (<em>bool</em>) – whether to standardize continuous data.</p></li>
+<li><p><strong>cattype</strong> (<em>str</em>) – encoding of the discrete variables (dummy).</p></li>
+<li><p><strong>names</strong> – optional list of column names.</p></li>
+<li><p><strong>shuffle</strong> (<em>bool</em>) – whether to shuffle rows before loading.</p></li>
+<li><p><strong>shuffleseed</strong> (<em>int</em>) – seed for shuffling.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cat_data (np.array), cont_data (np.array),
+meta information about the data (dict).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.load_prepare_split_data">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">load_prepare_split_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splittingfactor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cattype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dummy'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standardize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_csv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.load_prepare_split_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load data from specified filename.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>drop</strong> – optional list of columns to be dropped.</p></li>
+<li><p><strong>splittingfactor</strong> (<em>int</em>) – ratio to split between training and test data.</p></li>
+<li><p><strong>standardize</strong> (<em>bool</em>) – if True standardize continuous data:
+useful to avoid exp-overflow in certain data sets.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Dtrain, cont_datatrain, Dtest, cont_datatest, meta), where
+D denotes discrete data (dummy encoded) and cont_data continuous data
+with corresponding suffixes for training and test data,
+and meta is a dictionary containing information about the data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.load_traintest_datasets">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">load_traintest_datasets</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename_trunk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.load_traintest_datasets" title="Permalink to this definition">¶</a></dt>
+<dd><p>load train/ test data from csv files, compare load_prepare_split_data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Filenames must be of form
+filename_trunk%s.csv, where %s is _train or _test</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.prepare_cat_data">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">prepare_cat_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cattype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dummy'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.prepare_cat_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocess discrete/categorical data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.dataframe</em>) – data.</p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – meta information for panda data frame</p></li>
+<li><p><strong>as number of dicrete/continuous cols</strong><strong>)</strong><strong></strong> (<em>(</em><em>such</em>) – </p></li>
+<li><p><strong>cattype</strong> (<em>str</em>) – encoding of discrete data, can be
+‘dummy’ … store discrete data as dummy encoded variables
+‘dummy_red’ … store discrete data as dummy (leave out first col)
+‘index’ … store discrete data as index vectors
+‘index+1’ … store discrete data as index vectors, index shifted by one
+‘flat’  … store flattened (linear) index of discrete data
+(required for MAP-estimators).</p></li>
+<li><p><strong>verb</strong> (<em>bool</em>) – whether to prints stats.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>matrix of discrete data
+(dummy encoded indicator vectors, or indices)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.split_traintest">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">split_traintest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">splittingfactor</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.split_traintest" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper for load_prepare_split_data, writes split data to csv.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filenames</strong> (<em>str</em>) – filename.</p></li>
+<li><p><strong>splittingfactor</strong> (<em>int</em>) – train/test split ration in [0,1].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary of meta information about the data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.standardize_continuous_data">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">standardize_continuous_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cont_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meanssigmas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.standardize_continuous_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standardize continous data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cont_data</strong> (<em>np.array</em>) – continuous data.</p></li>
+<li><p><strong>meanssigmas</strong> (<em>optional</em>) – if provided, standardize with these means
+and sigmas instead of empirical quantities from the dataset.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>means and standard deviations</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.dataops.write_to_csv">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.dataops.</span></code><code class="sig-name descname"><span class="pre">write_to_csv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cat_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cont_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rpl_numericalcats'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'val'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.dataops.write_to_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write data to file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – name for csv where to store data.</p></li>
+<li><p><strong>cat_data</strong> (<em>np.array</em>) – categorical data.</p></li>
+<li><p><strong>cont_data</strong> (<em>np.array</em>) – continuous data.</p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – meta information about the data
+required options in meta are n_cat (# of discrete variables),
+n_cg (# of Gaussian variables), optional options in meta are
+n_latent (if &gt;0, then the last dl Gaussian columns are dropped,
+they are eliminated permanently from
+the continuous data cont_data),
+gaussnames (column names for Gaussian variables),
+categoricals (column names for Gaussian variables),</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – method for storing discrete data, can be
+rpl_numericalcats (replaces any integer value &lt;d&gt; of a categorical
+variable by dummy string val&lt;d&gt;) or for_matlab
+(produces a file that can be read from MATLAB).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.huber_clz">
+<span id="cgmodsel-huber-clz-module"></span><h2>cgmodsel.huber_clz module<a class="headerlink" href="#module-cgmodsel.huber_clz" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum</p>
+<p>A class to fit CLZ CG models</p>
+<p>this code is experimental, no warranty</p>
+<dl class="py class">
+<dt id="cgmodsel.huber_clz.HuberCLZ">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.huber_clz.</span></code><code class="sig-name descname"><span class="pre">HuberCLZ</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useweights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_huber.HuberBase" title="cgmodsel.base_huber.HuberBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_huber.HuberBase</span></code></a>, <a class="reference internal" href="#cgmodsel.base_solver.BaseCGSolver" title="cgmodsel.base_solver.BaseCGSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseCGSolver</span></code></a></p>
+<p>A class that provides with methods (model selection, crossvalidation)
+associated with CLZ CG models</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>code in this class is experimental</p>
+</div>
+<p>pass a dictionary that provides with keys dg, dc, and L</p>
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.crossvalidate">
+<code class="sig-name descname"><span class="pre">crossvalidate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.crossvalidate" title="Permalink to this definition">¶</a></dt>
+<dd><p>crossvalidation of model with parameters in x using current data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.get_bounds">
+<code class="sig-name descname"><span class="pre">get_bounds</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.get_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>return bounds for l-bfgs-b solver</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.get_canonicalparams">
+<code class="sig-name descname"><span class="pre">get_canonicalparams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.get_canonicalparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>retrieves the CLZ-CG model parameters from flat parameter vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>CLZ params class</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.get_fval_and_grad">
+<code class="sig-name descname"><span class="pre">get_fval_and_grad</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.get_fval_and_grad" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate function value f and gradient g of CLZ model
+:param x: vector of parameters</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>increases self.fcalls by 1, no other class variables are modified</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.get_starting_point">
+<code class="sig-name descname"><span class="pre">get_starting_point</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">random</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.get_starting_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a starting point containing zeros</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.preprocess">
+<code class="sig-name descname"><span class="pre">preprocess</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>unpack parameters from vector x and preprocess</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.huber_clz.HuberCLZ.set_regularization_params">
+<code class="sig-name descname"><span class="pre">set_regularization_params</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regparam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.huber_clz.HuberCLZ.set_regularization_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>set regularization parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>regparam</strong> – scaling parameter for lambda in the group-sparsity norm</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Problem is min l(Theta) + regparam*la* (sum_g ||Theta_g||_{2}),
+where the sum is over the groups.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.map">
+<span id="cgmodsel-map-module"></span><h2>cgmodsel.map module<a class="headerlink" href="#module-cgmodsel.map" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum</p>
+<p>CG model selection via MAP-estimation using mean parameters.</p>
+<dl class="py class">
+<dt id="cgmodsel.map.MAP">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.map.</span></code><code class="sig-name descname"><span class="pre">MAP</span></code><a class="headerlink" href="#cgmodsel.map.MAP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseCGSolver" title="cgmodsel.base_solver.BaseCGSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseCGSolver</span></code></a></p>
+<p>A class for estimating MAP models for CG distributions (mean parameters).</p>
+<dl class="py attribute">
+<dt id="cgmodsel.map.MAP.cat_format_required">
+<code class="sig-name descname"><span class="pre">cat_format_required</span></code><a class="headerlink" href="#cgmodsel.map.MAP.cat_format_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>specifier for format - constant.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.map.MAP.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#cgmodsel.map.MAP.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the class.</p>
+</dd></dl>
+
+<p>pass a dictionary that provides with keys dg, dc, and L</p>
+<dl class="py method">
+<dt id="cgmodsel.map.MAP.crossvalidate">
+<code class="sig-name descname"><span class="pre">crossvalidate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mean_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.map.MAP.crossvalidate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform crossvalidation by node-wise predictions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This uses the current data that has been dropped using method
+drop_data.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mean_params</strong> – tuple (p, mus, sigmas), where</p></li>
+<li><p><strong>has shape sizes</strong> (<em>p</em>) – </p></li>
+<li><p><strong>has shape sizes +</strong> (<em>else</em>) – </p></li>
+<li><p><strong>has shape</strong> (<em>sigmas</em>) – </p></li>
+<li><p><strong>has shape sizes +</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>prediction errors for discrete variables (np.array),</dt><dd><p>MSE errors for continuous variables (np.array),
+pseudo-likelihood value (float)</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.map.MAP.fit_fixed_covariance">
+<code class="sig-name descname"><span class="pre">fit_fixed_covariance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_art_cat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_art_cg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg_freedom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec_mu0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_sigma0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.map.MAP.fit_fixed_covariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>fit MAP model with single covariance matrix + individual CG means.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method of model estimation uses
+sums over the whole discrete state space.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_art_cat</strong> (<em>int</em>) – Laplacian smoothing parameter
+= artificial observations per discrete variable
+Dirichlet prior parameters (prior for discrete distribution).</p></li>
+<li><p><strong>n_art_cg</strong> (<em>int</em>) – number of ‘artificial’ data points per CG
+(prior parameter for means of conditional Gaussians).</p></li>
+<li><p><strong>vec_mu0</strong> – the value of artificial CG data points.</p></li>
+<li><p><strong>deg_freedom</strong> (<em>int</em>) – degrees of freedom
+(prior parameter for Wishart prior
+for the shared precision matrix of CG distributions).</p></li>
+<li><p><strong>mat_sigma0</strong> – initial guess for the covariance matrix.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Complete prior is a Dirichlet-Normal-Wishart prior.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MAP-estimate (p(x)_x, mu(x)_x, mat_sigma), where x
+are the discrete outcomes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.map.MAP.fit_variable_covariance">
+<code class="sig-name descname"><span class="pre">fit_variable_covariance</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_art_cat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_art_cg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg_freedom</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vec_mu0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mat_sigma0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.map.MAP.fit_variable_covariance" title="Permalink to this definition">¶</a></dt>
+<dd><p>fit MAP model with individual covariance matrices and means.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method of model estimation uses
+sums over the whole discrete state space.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_art_cat</strong> (<em>int</em>) – Laplacian smoothing parameter
+= artificial observations per discrete variable
+Dirichlet prior parameters (prior for discrete distribution).</p></li>
+<li><p><strong>n_art_cg</strong> (<em>int</em>) – number of ‘artificial’ data points per CG
+(prior parameter for means of conditional Gaussians).</p></li>
+<li><p><strong>vec_mu0</strong> – the value of artificial CG data points.</p></li>
+<li><p><strong>deg_freedom</strong> (<em>int</em>) – degrees of freedom
+(prior parameter for Wishart prior
+for the shared precision matrix of CG distributions).</p></li>
+<li><p><strong>mat_sigma0</strong> – initial guess for the covariance matrices.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Complete prior is a Dirichlet-Normal-Wishart prior.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>MAP-estimate (p(x)_x, mu(x)_x, mat_sigma_x), where x
+are the discrete outcomes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.map.MAP.get_plhvalue">
+<code class="sig-name descname"><span class="pre">get_plhvalue</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mean_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.map.MAP.get_plhvalue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for crossvalidate method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mean_params</strong> – tuple (p, mus, sigmas).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pseudo-likelihood value of current data set</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.prox">
+<span id="cgmodsel-prox-module"></span><h2>cgmodsel.prox module<a class="headerlink" href="#module-cgmodsel.prox" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>), 2019</p>
+<dl class="py class">
+<dt id="cgmodsel.prox.LikelihoodProx">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.prox.</span></code><code class="sig-name descname"><span class="pre">LikelihoodProx</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cat_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cont_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.prox.LikelihoodProx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.base_solver.BaseGradSolver" title="cgmodsel.base_solver.BaseGradSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.base_solver.BaseGradSolver</span></code></a></p>
+<p>solve pseudo-log-likelihood proximal operator</p>
+<p>“must provide with dictionary meta</p>
+<dl class="py method">
+<dt id="cgmodsel.prox.LikelihoodProx.crossvalidate">
+<code class="sig-name descname"><span class="pre">crossvalidate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.prox.LikelihoodProx.crossvalidate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform cross validation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This uses the current data that has been dropped using method
+drop_data.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>np.array</em>) – matrix of pairwise parameters.</p></li>
+<li><p><strong>alpha</strong> (<em>np.array</em>) – univariate CG parameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>prediction errors for discrete variables (np.array),</dt><dd><p>MSE errors for continuous variables (np.array),
+pseudo-likelihood value (float)</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.prox.LikelihoodProx.plh">
+<code class="sig-name descname"><span class="pre">plh</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.prox.LikelihoodProx.plh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate negative pseudo-log-likelihood value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>np.array</em>) – matrix of pairwise parameters.</p></li>
+<li><p><strong>alpha</strong> (<em>np.array</em>) – univariate CG parameters.</p></li>
+<li><p><strong>cval</strong> (<em>bool</em>) – if True, calculate (node-wise) cross validation error.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>negative pseudo-log-likelihood function value
+(if cval=False), else tuple (discrete crossvalidation errors,
+continuous crossvalidation errors, pseudo-likelihood value)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float/tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.prox.LikelihoodProx.solve">
+<code class="sig-name descname"><span class="pre">solve</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prox_param</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_thetaalpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.prox.LikelihoodProx.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve proximal mapping of negative pseudo loglikelihood.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The problem that is solved is given by
+min_{Theta, alpha} l_p(Theta, alpha) + 1/(2mu) * ||Theta-Z||_F^2.
+This method should usually not be called from users.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat_z</strong> (<em>np.array</em>) – matrix Z, see above.</p></li>
+<li><p><strong>prox_param</strong> (<em>float</em>) – parameter mu, see above.</p></li>
+<li><p><strong>old_thetaalpha</strong> (<em>tuple</em>) – used for initialization of the solver.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>theta, alpha (solution of the proximal mapping).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Waring:</dt><dd><p>known issue with ADMM:
+not doing warm starts may cause problems if solution is to inexact
+generally ADMM convergence requires very exact solutions
+-&gt; use ftol to control tolerancy, or refine to control #restarts</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.utils">
+<span id="cgmodsel-utils-module"></span><h2>cgmodsel.utils module<a class="headerlink" href="#module-cgmodsel.utils" title="Permalink to this headline">¶</a></h2>
+<p>Copyright: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>)</p>
+<p>This file contains various functions used in the module including
+- sparse norms and shrinkage operators
+- a stable logsumexp implementation
+- array printing-method that allows pasting the output into Python code</p>
+<dl class="py function">
+<dt id="cgmodsel.utils.dummy2dummyred">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">dummy2dummyred</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dummy_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">glims</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.dummy2dummyred" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert dummy to reduced dummy representation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.dummy_to_index">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">dummy_to_index</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dummy_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.dummy_to_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert dummy to index representation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.dummy_to_index_single">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">dummy_to_index_single</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dummy_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.dummy_to_index_single" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert dummy to index representation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.frange">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">frange</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.frange" title="Permalink to this definition">¶</a></dt>
+<dd><p>a float range function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.grp_soft_shrink">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">grp_soft_shrink</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">glims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.grp_soft_shrink" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate (group-)soft-shrinkage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat</strong> (<em>np.array</em>) – matrix.</p></li>
+<li><p><strong>tau</strong> (<em>float</em>) – non-negative shrinkage parameter.</p></li>
+<li><p><strong>off</strong> (<em>bool</em>) – if True, do not shrink diagonal entries.</p></li>
+<li><p><strong>glims</strong> – group delimiters (cumulative sizes of groups).</p></li>
+<li><p><strong>n_groups</strong> – # groups per row/column (if this is given,
+perform group soft shrink instead of soft shrink).</p></li>
+<li><p><strong>weights</strong> (<em>optional</em>) – weights for weighted l_{1,2} norm/shrinkage.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>shrunken matrix, (group) l_{1,2}-norm of shrunken matrix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>this code could be made much faster
+(by parallizing loops, efficient storage access).</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.index_to_dummy">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">index_to_dummy</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">glims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ltot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.index_to_dummy" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert index to dummy representation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.l21norm">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">l21norm</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">glims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">off</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.l21norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate l_{1,2}-norm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mat</strong> (<em>np.array</em>) – matrix.</p></li>
+<li><p><strong>off</strong> (<em>bool</em>) – if True, do not shrink diagonal entries.</p></li>
+<li><p><strong>glims</strong> – group delimiters (cumulative sizes of groups).</p></li>
+<li><p><strong>n_groups</strong> – # groups per row/column (if this is given,
+perform group soft shrink instead of soft shrink).</p></li>
+<li><p><strong>weights</strong> (<em>optional</em>) – weights for weighted l_{1,2} norm.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(group) l_{1,2}-norm.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.logsumexp">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">logsumexp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepdims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.logsumexp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the log of the sum of exponentials of input elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>np.array</em>) – array on which to compute logsumexp.</p></li>
+<li><p><strong>axis</strong> (<em>int</em>) – axis along which to compute logsupexp.</p></li>
+<li><p><strong>keepdims</strong> (<em>bool</em>) – passed to np.sum.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>logsumexp</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an adaptation of logsumexp in scipy.special (v1.1.0)</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.strlistfrom">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">strlistfrom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rnd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.strlistfrom" title="Permalink to this definition">¶</a></dt>
+<dd><p>a convenient representation for printing out numpy array
+s.t. it can be reused as a list</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.utils.tomatlabmatrix">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.utils.</span></code><code class="sig-name descname"><span class="pre">tomatlabmatrix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.utils.tomatlabmatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>print numpy matrix in a way that can be pasted into MATLAB code.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cgmodsel" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cgmodsel.models.html" class="btn btn-neutral float-right" title="cgmodsel.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="cgmodsel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Frank Nussbaum.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

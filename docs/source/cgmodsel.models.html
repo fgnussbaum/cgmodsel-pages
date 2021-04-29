@@ -1,0 +1,1234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cgmodsel.models package &mdash; cgmodsel 1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="cgmodsel package" href="cgmodsel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cgmodsel
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">cgmodsel</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="cgmodsel.html">cgmodsel package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="cgmodsel.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">cgmodsel.models package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.admm">cgmodsel.admm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.base_admm">cgmodsel.base_admm module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.base_huber">cgmodsel.base_huber module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.base_solver">cgmodsel.base_solver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.dataops">cgmodsel.dataops module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.huber_clz">cgmodsel.huber_clz module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.map">cgmodsel.map module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.prox">cgmodsel.prox module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel.utils">cgmodsel.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cgmodsel.html#module-cgmodsel">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cgmodsel</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">cgmodsel</a> &raquo;</li>
+        
+          <li><a href="cgmodsel.html">cgmodsel package</a> &raquo;</li>
+        
+      <li>cgmodsel.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/source/cgmodsel.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cgmodsel-models-package">
+<h1>cgmodsel.models package<a class="headerlink" href="#cgmodsel-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-cgmodsel.models.base">
+<span id="cgmodsel-models-base-module"></span><h2>cgmodsel.models.base module<a class="headerlink" href="#module-cgmodsel.models.base" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>), 2019-2021</p>
+<dl class="py class">
+<dt id="cgmodsel.models.base.BaseModel">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">BaseModel</span></code><a class="headerlink" href="#cgmodsel.models.base.BaseModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<p>A base class for all models.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.models.base.BaseModel.n_latent">
+<code class="sig-name descname"><span class="pre">n_latent</span></code><a class="headerlink" href="#cgmodsel.models.base.BaseModel.n_latent" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of latent variables in the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.models.base.BaseModel.annotations">
+<code class="sig-name descname"><span class="pre">annotations</span></code><a class="headerlink" href="#cgmodsel.models.base.BaseModel.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>contains model annotations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.models.base.BaseModel.meta">
+<code class="sig-name descname"><span class="pre">meta</span></code><a class="headerlink" href="#cgmodsel.models.base.BaseModel.meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>contains meta information about the distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.models.base.BaseModel.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#cgmodsel.models.base.BaseModel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>model name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModel.get_graph">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_graph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModel.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>return graph of the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModel.get_group_mat">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">get_group_mat</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModel.get_group_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>return matrix of group norms.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModel.get_meta">
+<code class="sig-name descname"><span class="pre">get_meta</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModel.get_meta" title="Permalink to this definition">¶</a></dt>
+<dd><p>get dictionary of meta data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModel.get_numberofedges">
+<code class="sig-name descname"><span class="pre">get_numberofedges</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModel.get_numberofedges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the number of edges in the conditional independence graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> (<em>float</em>) – threshold parameter for the edges.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of edges</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'base'</span></em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModel.repr_graphical">
+<code class="sig-name descname"><span class="pre">repr_graphical</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModel.repr_graphical" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a graphical representation of the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is overwritten by the Model_PWSL model class.
+Code for visualization is experimental.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="cgmodsel.models.base.BaseModelPW">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">BaseModelPW</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pw_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_padded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.models.base.BaseModel" title="cgmodsel.models.base.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.models.base.BaseModel</span></code></a></p>
+<p>A base class for pairwise models.
+It specializes to standard PW models and S+L (sparse + low-rank) models.</p>
+<dl class="py attribute">
+<dt id="cgmodsel.models.base.BaseModelPW.modeltype">
+<code class="sig-name descname"><span class="pre">modeltype</span></code><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.modeltype" title="Permalink to this definition">¶</a></dt>
+<dd><p>inferred model type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pw_params</strong> (<em>(</em><em>&lt;class 'dict'&gt;</em><em>, </em><em>&lt;class 'tuple'&gt;</em><em>, </em><em>&lt;class 'list'&gt;</em><em>)</em>) – parameters, either as dictionary, or tuple/list.</p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta info (similar to meta dictionary
+from loading data).</p></li>
+<li><p><strong>annotations</strong> (<em>dict</em><em>, </em><em>optional</em>) – pass annotations to the model.</p></li>
+<li><p><strong>in_padded</strong> (<em>bool</em>) – whether parameters are padded</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.get_graph">
+<code class="sig-name descname"><span class="pre">get_graph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate graph.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This calculate group norms of the parameters associated with
+each edge and applies threshold.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> (<em>float</em>) – threshold to use.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.get_group_mat">
+<code class="sig-name descname"><span class="pre">get_group_mat</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.get_group_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate matrix of group norms of the direct interactions.”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>diagonal</strong> (<em>bool</em>) – if False and aggr=True, then exclude groups</p></li>
+<li><p><strong>univariate parameters</strong> (<em>of</em>) – </p></li>
+<li><p><strong>aggr</strong> (<em>bool</em>) – if True, aggregate values of group into single value.</p></li>
+<li><p><strong>norm</strong> (<em>bool</em>) – if True, use np.linalg.norm for aggregation,</p></li>
+<li><p><strong>use np.sum.</strong> (<em>else</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>matrix obtained from group aggregations.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.get_pw_mat">
+<code class="sig-name descname"><span class="pre">get_pw_mat</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addunivariate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.get_pw_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the pairwise matrix of direct interaction parameters.
+in the case of the standard pairwise model this is the matrix of all
+pairwise interaction parameters</p>
+<dl class="simple">
+<dt>padded … Boolean to control whether return matrix</dt><dd><p>is padded with zero rows/cols
+(corresponding to first levels of discrete variables)</p>
+</dd>
+<dt>precmatsign … sign of the cts-cts interaction,</dt><dd><p>use negative sign to obtain valid representation
+of Schur complement</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.get_thetaalpha">
+<code class="sig-name descname"><span class="pre">get_thetaalpha</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.get_thetaalpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>return compound pairwise interaction parameter matrix and alpha,
+that is, univariate continuous parameter</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.sample">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">sample</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gibbs_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>sample n data points from the model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.save">
+<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foldername</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'savedmodels'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>save model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outfile</strong> (<em>str</em><em>, </em><em>optional</em>) – path/filename for model,
+if not provided, a filename is generated.</p></li>
+<li><p><strong>foldername</strong> (<em>str</em>) – folder in which file is saved
+(only used for generating filename).</p></li>
+<li><p><strong>trial</strong> (<em>int</em>) – used for generating filename (aka trial number).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>filename of saved model.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.base.BaseModelPW.update_annotations">
+<code class="sig-name descname"><span class="pre">update_annotations</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.BaseModelPW.update_annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>add anotations to the model by specifying keyword args</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.models.base.canon_to_meanparams">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">canon_to_meanparams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">canparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.canon_to_meanparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert canonical parameters to mean parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>canparams</strong> (<em>tuple</em>) – (q, nus, lambdas),
+where for fixed-covariance/precision models lambdas
+is the fixed precision for
+all CG distributions p(y|x) of the model (a 2D array),
+and lambdas=lambdas(x, :, :) is a 3D array
+if the precision matrices depend on x in p(y|x).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>meanparams (p, mus, sigmas)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.models.base.get_modeltype">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">get_modeltype</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.get_modeltype" title="Permalink to this definition">¶</a></dt>
+<dd><p>derive modeltype from variable specifications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta info about a dataset.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>modeltype.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.models.base.mean_to_canonparams">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">mean_to_canonparams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meanparams</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.mean_to_canonparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert mean parameters to canonical parameters.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conversion formulas are given by</p>
+<p>p(x) ~ (2pi)^{n/2}|La^{-1}|^{1/2}exp(q(x) + 1/2 nu(x)^T La^{-1} nu(x))</p>
+<p>mu(x) = La^{-1}nu(x)</p>
+<p>Sigma = La^{-1},</p>
+<p>where nu(x) = alpha + R D_x and q(x) = u^T D_x + 1/2 D_x^T Q D_x.
+Here, D_x is the dummy representation of the categorical values in x.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>meanparams</strong> (<em>tuple</em>) – (p, mus, sigmas),
+where for fixed-covariance models sigmas is the fixed covariance for
+all CG distributions p(y|x) of the model (a 2D array),
+and sigmas=sigmas(x, :, :) is a 3D array
+if the covariance matrices depend on x in p(y|x).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>canonical parameters (q, nus, lambdas).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.models.base.pad">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">pad</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rowsonly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.pad" title="Permalink to this definition">¶</a></dt>
+<dd><p>padding for pairwise parameter matrix or univariate parameter vectors.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This adds rows/columns of zeros for the 0-th levels,
+they correspond to interactions parameters set to 0 for identifiability
+reasons)</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr</strong> (<em>np.array</em>) – array to pad.</p></li>
+<li><p><strong>sizes</strong> (<em>list</em>) – number of levels for each discrete variable.</p></li>
+<li><p><strong>rowsonly</strong> (<em>bool</em>) – whether to pad only rows.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>padded array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cgmodsel.models.base.unpad">
+<code class="sig-prename descclassname"><span class="pre">cgmodsel.models.base.</span></code><code class="sig-name descname"><span class="pre">unpad</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sizes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.base.unpad" title="Permalink to this definition">¶</a></dt>
+<dd><p>unpad pairwise parameter matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>np.array</em>) – pairwise parameter matrix.</p></li>
+<li><p><strong>sizes</strong> – list of number of levels for each discrete variable.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>unpadded parameter matrix</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.models.model_clz">
+<span id="cgmodsel-models-model-clz-module"></span><h2>cgmodsel.models.model_clz module<a class="headerlink" href="#module-cgmodsel.models.model_clz" title="Permalink to this headline">¶</a></h2>
+<p>Copyright: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>), 2019</p>
+<p>This is experimental code</p>
+<dl class="py class">
+<dt id="cgmodsel.models.model_clz.ModelCLZ">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.models.model_clz.</span></code><code class="sig-name descname"><span class="pre">ModelCLZ</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clz_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.models.base.BaseModel" title="cgmodsel.models.base.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.models.base.BaseModel</span></code></a></p>
+<p>A class for parameters of CLZ (Cheng, Li, Levina, Zhu) models.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Density is given by</p>
+<p>p(x,y) ~ exp(1/2 C_x Q C_x +  y^T R C_x -1/2 y^T[La0 + Las C_x]y
++ u^T C_x + alpha^T y)</p>
+<p>Here, C_x is a dummy representation of x,
+u are univariate discrete parameters,
+alpha are univariate cont. parameters,
+discrete-discrete interactions Q,
+discrete-cont. interactions R,
+cont.-cont. interactions La0, and
+cont-cont-discrete interaction parameters Las (n_cg x n_cg x ltot).</p>
+<p>This class uses padded parameters (that is,
+parameters for 0-th levels are included, however,
+one might want them to be constrained to 0 for identifiability reasons)</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sl_params</strong> (<em>tuple</em>) – parameters (u, Q, R, alpha, La0, Las).</p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta info (similar to meta dictionary
+from loading data).</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following Args are (not yet) implemented:
+infile (str): filename of a CLZ model file.
+annotations (dict, optional): pass annotations to the model.
+in_padded (bool): whether parameters are padded
+Generally, code in this class is less tested and more experimental.</p>
+</div>
+<dl class="py method">
+<dt id="cgmodsel.models.model_clz.ModelCLZ.get_graph">
+<code class="sig-name descname"><span class="pre">get_graph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ.get_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate group norms for edges and threshold</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> (<em>float</em>) – threshold parameter.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>graph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_clz.ModelCLZ.get_group_mat">
+<code class="sig-name descname"><span class="pre">get_group_mat</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ.get_group_mat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform group aggregations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>diagonal</strong> (<em>bool</em>) – if False, set aggregation
+values for diagonal to zero.</p></li>
+<li><p><strong>norm</strong> (<em>bool</em>) – aggregate using Euclidean/ l2 norm.</p></li>
+<li><p><strong>aggr</strong> (<em>bool</em>) – argument just for compatibility.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Experimental code.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>matrix with values of group aggregations.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_clz.ModelCLZ.get_meanparams">
+<code class="sig-name descname"><span class="pre">get_meanparams</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ.get_meanparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert CLZ parameters into mean parameter representation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conversion formulas to mean parameters:</p>
+<p>p(x) ~ (2pi)^{n/2}|La(x)^{-1}|^{1/2}exp(q(x) + 1/2 nu(x)^T La(x)^{-1} nu(x))</p>
+<p>mu(x) = La(x)^{-1}nu(x)</p>
+<p>Sigma(x) = La(x)^{-1}</p>
+<p>with nu(x) = alpha + R D_x and q(x) = u^T D_x + 1/2 D_x^T Q D_x
+and La(x) = Lambda0 + sum_r Lambda_r D_{x_r} = Lambda0 + Lambdas*D_x.
+Here D_x is the dummy representation of the categorical values in x.</p>
+<p>Note that some arrays might be empty
+(if not both discrete and continuous variables are present).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mean parameters (p(x)_x, mu(x)_x, Sigma(x)_x)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_clz.ModelCLZ.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>return parameters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_clz.ModelCLZ.is_valid">
+<code class="sig-name descname"><span class="pre">is_valid</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if model represents a valid distribution, that is,
+check that all precision matrices are positive definite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.models.model_clz.ModelCLZ.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'CLZ'</span></em><a class="headerlink" href="#cgmodsel.models.model_clz.ModelCLZ.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.models.model_pw">
+<span id="cgmodsel-models-model-pw-module"></span><h2>cgmodsel.models.model_pw module<a class="headerlink" href="#module-cgmodsel.models.model_pw" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>), 2019-2021</p>
+<dl class="py class">
+<dt id="cgmodsel.models.model_pw.ModelPW">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.models.model_pw.</span></code><code class="sig-name descname"><span class="pre">ModelPW</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pw_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">infile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.models.base.BaseModelPW" title="cgmodsel.models.base.BaseModelPW"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.models.base.BaseModelPW</span></code></a></p>
+<p>A class for pairwise CG models.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Model to store parameters of pairwise CG model with density</p>
+<p>p(x,y) ~ exp(1/2 (C_x, y)^T Theta (C_x y) + u^T C_x + alpha^T y).</p>
+<p>Here, C_x is a dummy representation of x,
+u are univariate discrete parameters,
+alpha are univariate cont. parameters,
+Theta is the pairwise interaction parameter matrix given by
+Theta = (Q &amp; R^T R &amp; -Lambda)
+with
+discrete-discrete interactions Q,
+discrete-cont. interactions R,
+and cont.-cont. interactions Lambda.</p>
+<p>This class uses padded parameters (that is,
+parameters for 0-th levels are included, however,
+one might want them to be constrained to 0 for identifiability reasons)</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Attention to the special case of only Gaussians observed variables,
+uses as above</p>
+<p>p(y) ~ exp(1/2  y^T Theta y + alpha^T y),</p>
+<p>i.e. pairwise parameters (Theta) have inverted sign
+compared to the regular precision matrix.
+The density parametrized by the precision matrix would read as
+p(y) ~ exp(-1/2 y^T precisionmatrix y + alpha^T y).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pw_params</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>]) – parameters, either as dictionary, or tuple/list.
+As tuple/list use form (u, Q, R, alpha, Lambda),
+as dictionary provide keys pw_mat (alpha, u).</p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta info (similar to meta dictionary
+from loading data).</p></li>
+<li><p><strong>infile</strong> (<em>str</em>) – filename of a PW model file. Loading model from file
+has the highest priority.</p></li>
+<li><p><strong>annotations</strong> (<em>dict</em><em>, </em><em>optional</em>) – pass annotations to the model.</p></li>
+<li><p><strong>in_padded</strong> (<em>bool</em>) – whether parameters are padded</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.add_latent_cg">
+<code class="sig-name descname"><span class="pre">add_latent_cg</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_latent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">connectionprob</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctsscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marginalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.add_latent_cg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Augment model with latent variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_latent</strong> (<em>int</em>) – number of latent variables to add.</p></li>
+<li><p><strong>connectionprob</strong> (<em>float</em>) – probability of interaction
+between latent variables.</p></li>
+<li><p><strong>marginalize</strong> (<em>bool</em>) – if True, return S+L model (class Model_PWSL)
+with the latent variables marginalized out.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Experimental code with various other parameters
+to determine interactions strengths etc.
+Ensures that the model remains normalizable.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>marginalized model (only if marginalize=True,
+return None else)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Model_PWSL</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.get_meanparams">
+<code class="sig-name descname"><span class="pre">get_meanparams</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.get_meanparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper for _get_meanparams from base class Model_PW_Base</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mean parameters (p, mus, Sigmas)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.get_no_edges">
+<code class="sig-name descname"><span class="pre">get_no_edges</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.get_no_edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate number of edges.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>kwargs are forwarded to get_graph method from base class.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> (<em>float</em>) – cutoff for edges.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of edges.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.get_pairwiseparams">
+<code class="sig-name descname"><span class="pre">get_pairwiseparams</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.get_pairwiseparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pairwise parameter matrix Theta, u, alpha</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>padded</strong> (<em>bool</em>) – whether return padded version of parameters</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Theta, u, alpha.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get model parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(u, Q, R, alpha, Lambda)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.marginalize">
+<code class="sig-name descname"><span class="pre">marginalize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">drop_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.marginalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Marginalize out CG variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>drop_idx</strong> (<em>(</em><em>&lt;class 'tuple'&gt;</em><em>, </em><em>&lt;class 'list'&gt;</em><em>)</em>) – indices of CG to be marginalized out.</p></li>
+<li><p><strong>verb</strong> (<em>bool</em>) – controls verbose mode.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>sparse + low-rank instance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Model_PWSL</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>marginalization follows a Schur-complement formula, see
+the dissertation - the decomposition is of the form S + L.</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.models.model_pw.ModelPW.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'PW'</span></em><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pw.ModelPW.sample">
+<code class="sig-name descname"><span class="pre">sample</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gibbs_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pw.ModelPW.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample from the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This implements a naive Gibbs sampler for pairwise models.
+Each sample is sampled after reinitialization,
+followed by gibbs_iter steps of the Markov chain.
+Code is not optimized.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – number of samples to be generated.</p></li>
+<li><p><strong>gibbs_iter</strong> (<em>int</em>) – steps of the Markov Chain.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cat_data (np.array), cont_data (np.array).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.models.model_pwsl">
+<span id="cgmodsel-models-model-pwsl-module"></span><h2>cgmodsel.models.model_pwsl module<a class="headerlink" href="#module-cgmodsel.models.model_pwsl" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: Frank Nussbaum (<a class="reference external" href="mailto:frank&#46;nussbaum&#37;&#52;&#48;uni-jena&#46;de">frank<span>&#46;</span>nussbaum<span>&#64;</span>uni-jena<span>&#46;</span>de</a>), 2019-2021</p>
+<dl class="py class">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cgmodsel.models.model_pwsl.</span></code><code class="sig-name descname"><span class="pre">ModelPWSL</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sl_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">infile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_padded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#cgmodsel.models.base.BaseModelPW" title="cgmodsel.models.base.BaseModelPW"><code class="xref py py-class docutils literal notranslate"><span class="pre">cgmodsel.models.base.BaseModelPW</span></code></a></p>
+<p>A class for parameters of sparse + low-rank models</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Model to store parameters of pairwise CG model,
+where some of the CG variables have been marginalized out.
+Density is given by</p>
+<p>p(x,y) ~ exp(1/2 (C_x, y)^T (S+L) (C_x y) + u^T C_x + alpha^T y)</p>
+<p>Here, C_x is a dummy representation of x,
+u are univariate discrete parameters,
+alpha are univariate cont. parameters,
+L&gt;=0 describes indirect interactions,
+S describes direct pairwise interactions given by
+S= (Q &amp; R^T R &amp; -Lambda)
+with
+discrete-discrete interactions Q,
+discrete-cont. interactions R,
+and cont.-cont. interactions Lambda.</p>
+<p>This class uses padded parameters (that is,
+parameters for 0-th levels are included, however,
+one might want them to be constrained to 0 for identifiability reasons)</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Attention to the special case of only Gaussians observed variables,
+uses as above</p>
+<p>p(y) ~ exp(1/2  y^T (S+L) y + alpha^T y),</p>
+<p>i.e., the pairwise parameters S have inverted sign
+compared to the regular precision matrix
+as used in Chandrasekaran et al. (2011):
+p(y) ~ exp(-1/2 y^T (S-L) y + alpha^T y).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sl_params</strong> (<em>tuple</em>) – parameters (u, Q, R, alpha, Lambda, L).</p></li>
+<li><p><strong>meta</strong> (<em>dict</em>) – dictionary of meta info (similar to meta dictionary
+from loading data).</p></li>
+<li><p><strong>infile</strong> (<em>str</em>) – filename of a PW model file. Loading model from file
+has the highest priority.</p></li>
+<li><p><strong>annotations</strong> (<em>dict</em><em>, </em><em>optional</em>) – pass annotations to the model.</p></li>
+<li><p><strong>in_padded</strong> (<em>bool</em>) – whether parameters are padded</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.compare">
+<code class="sig-name descname"><span class="pre">compare</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.compare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare this model with another S+L model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>other</strong> – another Model_PSWL model instance
+to which this model is to be compared
+(typically some ‘true’ model).</p></li>
+<li><p><strong>threshold</strong> – threshold for counting edges, non-zero singular values.</p></li>
+<li><p><strong>disp</strong> (<em>bool</em>) – whether to plot differences.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>kwargs are passed to _get_group_mat
+and get_groupnorm_theta methods.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>plus_edges (additional edges in model self), minus_edges
+(missing edges from model other), diff_rank
+= rank(L_self) - rank(L_other)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_groupnorm_theta">
+<code class="sig-name descname"><span class="pre">get_groupnorm_theta</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_groupnorm_theta" title="Permalink to this definition">¶</a></dt>
+<dd><p>return group norms of Theta (observed pw interactions)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>diagonal</strong> (<em>bool</em>) – whether to include diagonal.</p></li>
+<li><p><strong>norm</strong> (<em>bool</em>) – if True, aggregate groups using Euclidean norm.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>matrix with aggregated groups.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_grpnorm_s">
+<code class="sig-name descname"><span class="pre">get_grpnorm_s</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_grpnorm_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>return group l12-norm of sparse component S</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>addu</strong> – set to 1.0 if univariate effects (diagonal)
+shall be included in calculation, set to 0 otherwise</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>l_{1,2}-norm.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_incoherence">
+<code class="sig-name descname"><span class="pre">get_incoherence</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_incoherence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate incoherence.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>coh(L) = max_i ||P_{U(L)} e_i||_2,
+where P_{U(L)} projects onto the row/column space U(L) of L</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>incoherence value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_lambdamax">
+<code class="sig-name descname"><span class="pre">get_lambdamax</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_lambdamax" title="Permalink to this definition">¶</a></dt>
+<dd><p>return maximal singular value of low-rank matrix</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_meanparams">
+<code class="sig-name descname"><span class="pre">get_meanparams</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_meanparams" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper for _get_meanparams from base class</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Q, R, Lambda are obtained from the compound matrix Theta = S + L.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>mean parameters (p, mus, Sigmas).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_params">
+<code class="sig-name descname"><span class="pre">get_params</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>return a list of the class parameters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_params_sl">
+<code class="sig-name descname"><span class="pre">get_params_sl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clean_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_params_sl" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>padded</strong> (<em>bool</em>) – whether to return padded parameter values.</p></li>
+<li><p><strong>clean_l</strong> – if set to true, discrete effects on diagonal of d are
+transferred to u, and discrete block diagonal of L is set
+to zero</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(S, L, u, alpha)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Density then is
+p(x,y) ~ exp(1/2 (C_x, y)^T (S+L) (C_x y) + u^T C_x + alpha^T y).</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_stats">
+<code class="sig-name descname"><span class="pre">get_stats</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate number of edges of S and rank of L.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>threshold</strong> (<em>float</em>) – cutoff for edges and principal components.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of edges (int), rank (int)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.get_theta">
+<code class="sig-name descname"><span class="pre">get_theta</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">padded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.get_theta" title="Permalink to this definition">¶</a></dt>
+<dd><p>get marginal interaction parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>padded</strong> (<em>bool</em>) – if true, return 0-padded parameter matrices.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(Theta = S + L, u), where discrete block diagonal of Theta
+is set to zero and discrete univariate effects are in u</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'SL'</span></em><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.plot_sl">
+<code class="sig-name descname"><span class="pre">plot_sl</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usegraph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagcutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_l</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_abs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aggr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notitle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samescale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cbarscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plottype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bw'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.plot_sl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot S+L decomposition.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>several options are available to make the plots look nice.
+Experimental code.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.repr_graphical">
+<code class="sig-name descname"><span class="pre">repr_graphical</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diagonal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jointboundaries</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samecolorbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printspec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.repr_graphical" title="Permalink to this definition">¶</a></dt>
+<dd><p>another plotting function for the model</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is experimental code.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.sample">
+<code class="sig-name descname"><span class="pre">sample</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gibbs_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sample from the model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calls the Gibbs samples from Model_PW,
+hence the interace is the same.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – number of samples to be generated.</p></li>
+<li><p><strong>gibbs_iter</strong> (<em>int</em>) – steps of the Markov Chain.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cat_data (np.array), cont_data (np.array).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cgmodsel.models.model_pwsl.ModelPWSL.to_pwmodel">
+<code class="sig-name descname"><span class="pre">to_pwmodel</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cgmodsel.models.model_pwsl.ModelPWSL.to_pwmodel" title="Permalink to this definition">¶</a></dt>
+<dd><p>return model converted to pairwise model (class ModelPW)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cgmodsel.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cgmodsel.models" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cgmodsel.html" class="btn btn-neutral float-left" title="cgmodsel package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Frank Nussbaum.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+cgmodsel package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   cgmodsel.models
+
+Submodules
+----------
+
+cgmodsel.admm module
+--------------------
+
+.. automodule:: cgmodsel.admm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.base\_admm module
+--------------------------
+
+.. automodule:: cgmodsel.base_admm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.base\_huber module
+---------------------------
+
+.. automodule:: cgmodsel.base_huber
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.base\_solver module
+----------------------------
+
+.. automodule:: cgmodsel.base_solver
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.dataops module
+-----------------------
+
+.. automodule:: cgmodsel.dataops
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.huber\_clz module
+--------------------------
+
+.. automodule:: cgmodsel.huber_clz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.map module
+-------------------
+
+.. automodule:: cgmodsel.map
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.prox module
+--------------------
+
+.. automodule:: cgmodsel.prox
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+cgmodsel.utils module
+---------------------
+
+.. automodule:: cgmodsel.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: cgmodsel
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+cgmodsel
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   cgmodsel
